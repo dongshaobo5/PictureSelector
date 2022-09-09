@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode cfgs.versionCode
+        versionName cfgs.versionName
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    PUBLISH_ARTIFACT_ID = "camerax"
+}
+
+apply from: '../publish.gradle'
+
+dependencies {
+    api "androidx.camera:camera-core:1.2.0-alpha01"
+    api "androidx.camera:camera-camera2:1.2.0-alpha01"
+    implementation "androidx.camera:camera-view:1.2.0-alpha01"
+    implementation "androidx.camera:camera-lifecycle:1.2.0-alpha01"
+    implementation "androidx.appcompat:appcompat:${cfgs.version_appcompat}"
+    implementation "androidx.transition:transition:${cfgs.transition}"
+    implementation "androidx.concurrent:concurrent-futures:${cfgs.futures}"
+}
