@@ -228,7 +228,6 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
         RadioGroup rgb_animation = findViewById(R.id.rgb_animation);
         RadioGroup rgb_list_anim = findViewById(R.id.rgb_list_anim);
         RadioGroup rgb_photo_mode = findViewById(R.id.rgb_photo_mode);
-        RadioGroup rgb_language = findViewById(R.id.rgb_language);
         RadioGroup rgb_engine = findViewById(R.id.rgb_engine);
         cb_voice = findViewById(R.id.cb_voice);
         cb_choose_mode = findViewById(R.id.cb_choose_mode);
@@ -282,7 +281,6 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
         rgb_animation.setOnCheckedChangeListener(this);
         rgb_list_anim.setOnCheckedChangeListener(this);
         rgb_photo_mode.setOnCheckedChangeListener(this);
-        rgb_language.setOnCheckedChangeListener(this);
         rgb_video_player.setOnCheckedChangeListener(this);
         rgb_engine.setOnCheckedChangeListener(this);
         RecyclerView mRecyclerView = findViewById(R.id.recycler);
@@ -389,36 +387,12 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                         .setAttachViewLifecycle(new IBridgeViewLifecycle() {
                             @Override
                             public void onViewCreated(Fragment fragment, View view, Bundle savedInstanceState) {
-//                                PictureSelectorPreviewFragment previewFragment = (PictureSelectorPreviewFragment) fragment;
-//                                MediumBoldTextView tvShare = view.findViewById(R.id.tv_share);
-//                                tvShare.setVisibility(View.VISIBLE)
-//                                previewFragment.addAminViews(tvShare);
-//                                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) tvShare.getLayoutParams();
-//                                layoutParams.topMargin = cb_preview_full.isChecked() ? DensityUtil.getStatusBarHeight(getContext()) : 0;
-//                                tvShare.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        PicturePreviewAdapter previewAdapter = previewFragment.getAdapter();
-//                                        ViewPager2 viewPager2 = previewFragment.getViewPager2();
-//                                        LocalMedia media = previewAdapter.getItem(viewPager2.getCurrentItem());
-//                                        ToastUtils.showToast(fragment.getContext(), "自定义分享事件:" + viewPager2.getCurrentItem());
-//                                    }
-//                                });
+
                             }
 
                             @Override
                             public void onDestroy(Fragment fragment) {
-//                                if (cb_preview_full.isChecked()) {
-//                                    // 如果是全屏预览模式且是startFragmentPreview预览，回到自己的界面时需要恢复一下自己的沉浸式状态
-//                                    // 以下提供2种解决方案:
-//                                    // 1.通过ImmersiveManager.immersiveAboveAPI23重新设置一下沉浸式
-//                                    int statusBarColor = ContextCompat.getColor(getContext(), R.color.ps_color_grey);
-//                                    int navigationBarColor = ContextCompat.getColor(getContext(), R.color.ps_color_grey);
-//                                    ImmersiveManager.immersiveAboveAPI23(MainActivity.this,
-//                                            true, true,
-//                                            statusBarColor, navigationBarColor, false);
-//                                    // 2.让自己的titleBar的高度加上一个状态栏高度且内容PaddingTop下沉一个状态栏的高度
-//                                }
+
                             }
                         })
                         .setInjectLayoutResourceListener(new OnInjectLayoutResourceListener() {
@@ -506,8 +480,6 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                                 .isOpenClickSound(cb_voice.isChecked())
                                 .setSkipCropMimeType(getNotSupportCrop())
                                 .isFastSlidingSelect(cb_fast_select.isChecked())
-                                //.setOutputCameraImageFileName("luck.jpeg")
-                                //.setOutputCameraVideoFileName("luck.mp4")
                                 .isWithSelectVideoImage(cb_WithImageVideo.isChecked())
                                 .isPreviewFullScreenMode(cb_preview_full.isChecked())
                                 .isVideoPauseResumePlay(cb_video_resume.isChecked())
@@ -537,7 +509,6 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                                         return animation.getDuration();
                                     }
                                 } : null)
-                                //.setQueryOnlyMimeType(PictureMimeType.ofGIF())
                                 .isMaxSelectEnabledMask(cbEnabledMask.isChecked())
                                 .isDirectReturnSingle(cb_single_back.isChecked())
                                 .setMaxSelectNum(maxSelectNum)
@@ -1969,38 +1940,6 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 break;
             case R.id.rb_ijk_player:
                 videoPlayerEngine = new IjkPlayerEngine();
-                break;
-            case R.id.rb_system:
-                language = LanguageConfig.SYSTEM_LANGUAGE;
-                break;
-            case R.id.rb_jpan:
-                language = LanguageConfig.JAPAN;
-                break;
-            case R.id.rb_tw:
-                language = LanguageConfig.TRADITIONAL_CHINESE;
-                break;
-            case R.id.rb_us:
-                language = LanguageConfig.ENGLISH;
-                break;
-            case R.id.rb_ka:
-                language = LanguageConfig.KOREA;
-                break;
-            case R.id.rb_de:
-                language = LanguageConfig.GERMANY;
-                break;
-            case R.id.rb_fr:
-                language = LanguageConfig.FRANCE;
-                break;
-            case R.id.rb_spanish:
-                language = LanguageConfig.SPANISH;
-                break;
-            case R.id.rb_portugal:
-                language = LanguageConfig.PORTUGAL;
-                break;
-            case R.id.rb_ar:
-                language = LanguageConfig.AR;
-            case R.id.rb_ru:
-                language = LanguageConfig.RU;
                 break;
             case R.id.rb_crop_default:
                 aspect_ratio_x = -1;

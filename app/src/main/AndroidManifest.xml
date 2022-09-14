@@ -56,33 +56,15 @@
             android:value="2.1" />
 
         <activity
-            android:name=".SimpleActivity"
+            android:name=".MainActivity"
             android:exported="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor">
-
-        </activity>
-        <activity
-            android:name=".InjectFragmentActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor">
-
-        </activity>
-        <activity
-            android:name=".OnlyQueryDataActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor">
-
         </activity>
     </application>
 
