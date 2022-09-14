@@ -1,6 +1,6 @@
 # PictureSelector
 Android 选择图片、上传图片
-原博客文档地址：https://blog.csdn.net/hnlgzb/article/details/88351765?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-88351765-blog-53320945.pc_relevant_default&spm=1001.2101.3001.4242.2&utm_relevant_index=4
+原博客文档地址：https://blog.csdn.net/yechaoa/article/details/79291552
 
 # PictureSelector 3.0
    A PictureSelector for Android platform, which supports obtaining pictures, videos, audio & photos from photo albums, cutting (single picture or multi picture cutting), compression, theme custom configuration and other functions, and supports dynamic access & an open source picture selection framework suitable for Android 5.0 + system<br> 
