@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.luck.picture.lib.PictureSelectorPreviewFragment;
 import com.luck.picture.lib.adapter.PicturePreviewAdapter;
+import com.luck.pictureselector.adapter.CustomPreviewAdapter;
 
 /**
  * @author：luck

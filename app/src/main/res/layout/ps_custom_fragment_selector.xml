@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_bar" />
 
-    <com.luck.pictureselector.CustomTitleBar
+    <com.luck.pictureselector.bar.CustomTitleBar
         android:id="@+id/title_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_height="48dp" />
 
-    <com.luck.pictureselector.CustomBottomNavBar
+    <com.luck.pictureselector.bar.CustomBottomNavBar
         android:id="@+id/bottom_nar_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         tools:layout_height="45dp" />
 
 
-    <com.luck.pictureselector.CustomCompleteSelectView
+    <com.luck.pictureselector.view.CustomCompleteSelectView
         android:id="@+id/ps_complete_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

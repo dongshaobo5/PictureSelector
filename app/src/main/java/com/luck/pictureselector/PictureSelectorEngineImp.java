@@ -9,7 +9,6 @@ import com.luck.picture.lib.engine.CompressEngine;
 import com.luck.picture.lib.engine.CompressFileEngine;
 import com.luck.picture.lib.engine.ExtendLoaderEngine;
 import com.luck.picture.lib.engine.ImageEngine;
-import com.luck.picture.lib.engine.MediaPlayerEngine;
 import com.luck.picture.lib.engine.PictureSelectorEngine;
 import com.luck.picture.lib.engine.SandboxFileEngine;
 import com.luck.picture.lib.engine.UriToFileTransformEngine;
@@ -18,6 +17,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.interfaces.OnInjectLayoutResourceListener;
 import com.luck.picture.lib.interfaces.OnResultCallbackListener;
 import com.luck.picture.lib.loader.IBridgeMediaLoader;
+import com.luck.pictureselector.engine.GlideEngine;
 
 import java.util.ArrayList;
 

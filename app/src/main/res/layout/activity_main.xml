@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_color_white"
-    tools:context="com.luck.pictureselector.MainActivity">
+    tools:context="com.luck.pictureselector.view.MainActivity">
 
     <View
         android:id="@+id/view_title"

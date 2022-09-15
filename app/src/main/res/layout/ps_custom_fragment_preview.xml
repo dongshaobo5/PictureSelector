@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.luck.pictureselector.CustomPreviewTitleBar
+    <com.luck.pictureselector.bar.CustomPreviewTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         tools:layout_height="48dp" />
 
 
-    <com.luck.pictureselector.CustomPreviewBottomNavBar
+    <com.luck.pictureselector.bar.CustomPreviewBottomNavBar
         android:id="@+id/bottom_nar_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/title_bar" />
 
-    <com.luck.pictureselector.CustomCompleteSelectView
+    <com.luck.pictureselector.view.CustomCompleteSelectView
         android:id="@+id/ps_complete_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
